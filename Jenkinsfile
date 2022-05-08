@@ -15,8 +15,8 @@ pipeline {
             steps {
                 sh "pwd"
                 dir('app'){
-                    sh "sudo docker build -t flask-app ."
-                    sh "sudo docker image ls"
+                    sh "docker build -t flask-app ."
+                    sh "docker image ls"
                 }                
                 echo 'Building docker image'
             }
