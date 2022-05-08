@@ -14,7 +14,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh "pwd"
-                echo 'Building..'
+                dir('app'){
+                    sh "docker build -t flask-app ."
+                    sh "docker image ls"
+                }                
+                echo 'Building docker image'
             }
         }
         stage('Test') {
