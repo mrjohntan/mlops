@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh "pwd"
                 dir('preprocessing'){
-                    sh "python preprocessing.py"
+                    sh "python3 preprocessing.py"
                 }
                 echo 'Processing Data'
             }
